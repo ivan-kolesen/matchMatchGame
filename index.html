@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Match-match game</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+<section class="greeting">
+  <h1>Match-match game</h1>
+  <h3>Welcome to match-match game!</h3>
+  <h4>Game rules:</h4>
+  <ul>
+    <li>Select the card and flip it over</li>
+    <li>Select another card and also flip it</li>
+    <li>If the images match, the cards will disappear</li>
+    <li>Otherwise the cards will flip over back</li>
+    <li>Your task is to find all pairs of cards and clear the field</li>
+    <li>Good luck!!!</li>
+  </ul>
+  <button class="greeting__button" type="button">Continue</button>
+</section>
+<section class="settings">
+  <form>
+    <div class="form__half">
+      <h4>User information</h4>
+      <div class="form__half__row">
+        <label>First Name: </label>
+        <input type="text" placeholder="your first name*" required>
+      </div>
+      <div class="form__half__row">
+        <label>Last Name: </label>
+        <input type="text" placeholder="your last name*" required>
+      </div>
+      <div class="form__half__row">
+        <label>Email: </label>
+        <input type="email" placeholder="your email*" required>
+      </div>
+    </div>
+    <div class="form__half">
+      <h4>Settings</h4>
+      <div class="form__half__row">
+        <p>Choose the pattern:</p>
+        <label class="label_pattern">
+          <input type="radio" name="pattern" value="first_pattern" checked="checked">
+          <img src="img/football1.png">
+        </label>
+        <label class="label_pattern">
+          <input type="radio" name="pattern" value="second_pattern">
+          <img src="img/football2.png">
+        </label>
+      </div>
+      <div class="form__half__row">
+        <label>Choose the difficulty: </label>
+        <select>
+          <option name="difficulty" value="game__field__card_low" selected>Low (5 x 2)</option>
+          <option name="difficulty" value="game__field__card_medium">Medium (6 x 3)</option>
+          <option name="difficulty" value="game__field__card_hard">High (8 x 3)</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <button class="settings__button" type="button">Continue</button>
+</section>
+<section class="game">
+  <div class="game__timer">0</div>
+  <div class="game__field">
+  </div>
+</section>
+<section class="result">
+  <canvas class="result__confetti"></canvas>
+  <h2>Congratulations!!!</h2>
+  <h3>Your score is:</h3>
+  <h4>7 77</h4>
+  <button class="result__button" type="button">Highscores</button>
+</section>
+<section class="highscores">
+  <h4>Highscores</h4>
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Score</th>
+    </tr>
+  </table>
+</section>
+<script src="js/code.js"></script>
+<script src="js/confetti.js"></script>
+</body>
+</html>
